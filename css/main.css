@@ -58,6 +58,37 @@ a {
   left: 0;
   z-index: 800;
 }
+.dark-light-mode {
+  color: white;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color-5);
+  font-size: 20px;
+  background-color: var(--main-color-6);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.dark-light-mode:hover {
+  color: var(--main-color-3);
+}
+.dark-light-mode .non-appear {
+  display: none;
+}
 /* End Components */
 /* Start Landing Page */
 .landing-page {
@@ -86,15 +117,24 @@ a {
 }
 .landing-page header .links .close {
   display: none;
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--main-color-6);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--main-color-6);
+  cursor: pointer;
 }
 @media (max-width: 991px) {
   .landing-page header .links {
-    display: none;
-  }
-  .landing-page header .links.open {
     display: block;
-    position: absolute;
-    right: 0px;
+    position: fixed;
+    right: -200px;
     top: 0px;
     background-color: var(--main-color-3);
     padding: 50px 0;
@@ -102,24 +142,20 @@ a {
     width: 200px;
     z-index: 1000;
     height: 100%;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+  .landing-page header .links.open {
+    right: 0;
   }
   .landing-page header .links.open .close {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 30px;
-    height: 30px;
-    border: 3px solid red;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    font-size: 20px;
-    font-weight: bold;
-    color: red;
-    cursor: pointer;
     top: 5px;
     left: 5px;
   }
@@ -173,7 +209,7 @@ a {
     right: 25px;
     bottom: 30px;
     z-index: 1100;
-    background-color: #000000;
+    background-color: var(--main-color-6);
     display: block;
   }
 }

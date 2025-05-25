@@ -1,3 +1,4 @@
+// control the toggle-menu when clicked
 let links = document.querySelector(".landing-page header .links");
 let overlay = document.querySelector(".overlay");
 let myCV = document.querySelector(".landing-page header .my-cv");
@@ -13,4 +14,51 @@ toggleClose.onclick = function (e) {
   links.classList.remove("open");
   overlay.classList.remove("open");
   myCV.classList.remove("open");
+};
+
+// Change between dark and light modes
+function darkToLight() {
+  document.documentElement.style.setProperty("--main-color-1", "#f8f9fa");
+  document.documentElement.style.setProperty("--main-color-2", "#e9ecef");
+  document.documentElement.style.setProperty("--main-color-3", "#0cb5a4");
+  document.documentElement.style.setProperty("--main-color-4", "#58beaf");
+  document.documentElement.style.setProperty("--main-color-5", "#000000");
+  document.documentElement.style.setProperty("--main-color-6", "#ffffff");
+}
+function lightToDark() {
+  document.documentElement.style.setProperty("--main-color-1", "#1a1e23");
+  document.documentElement.style.setProperty("--main-color-2", "#292f36");
+  document.documentElement.style.setProperty("--main-color-3", "#12f7d6");
+  document.documentElement.style.setProperty("--main-color-4", "#b6fff4");
+  document.documentElement.style.setProperty("--main-color-5", "#ffffff");
+  document.documentElement.style.setProperty("--main-color-6", "#000000");
+}
+let darkLightMode = document.querySelector(".dark-light-mode");
+let lightMode = document.querySelector(".dark-light-mode .light-mode");
+let darkMode = document.querySelector(".dark-light-mode .dark-mode");
+
+let light = localStorage.getItem("light");
+
+if (light) {
+  if (light === "appear") {
+    lightMode.classList.add("non-appear");
+    darkMode.classList.remove("non-appear");
+    darkToLight();
+  } else {
+    lightMode.classList.remove("non-appear");
+    darkMode.classList.add("non-appear");
+    lightToDark();
+  }
+}
+darkLightMode.onclick = function (e) {
+  lightMode.classList.toggle("non-appear");
+  darkMode.classList.toggle("non-appear");
+
+  if (lightMode.classList.contains("non-appear")) {
+    localStorage.setItem("light", "appear");
+    darkToLight();
+  } else {
+    localStorage.setItem("light", "non-appear");
+    lightToDark();
+  }
 };
