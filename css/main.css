@@ -1,11 +1,12 @@
 /* Start Base */
 :root {
   --main-color-1: #1a1e23;
-  --main-color-2: #292f36;
+  --main-color-2: #5a616b;
   --main-color-3: #12f7d6;
   --main-color-4: #b6fff4;
   --main-color-5: #ffffff;
   --main-color-6: #000000;
+  --main-color-7: #7d7a7a;
   --main-transition: 0.3s;
 }
 * {
@@ -70,7 +71,7 @@ a {
   align-items: center;
   color: var(--main-color-5);
   font-size: 20px;
-  background-color: var(--main-color-6);
+  background-color: var(--main-color-7);
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -252,7 +253,7 @@ a {
 .landing-page header .toggle-menu span {
   width: 100%;
   height: 3px;
-  background-color: #12f7d6;
+  background-color: var(--main-color-3);
   border-radius: 1px;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -354,6 +355,62 @@ a {
   }
 }
 /* End Landing Page */
+/* Start About Me */
+.about-me {
+  padding: 60px 0;
+  background-color: var(--main-color-2);
+}
+.about-me .container {
+  display: flex;
+  align-items: center;
+}
+.about-me .image {
+  text-align: center;
+}
+.about-me .image img {
+  width: 250px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.about-me .info {
+  margin-left: 70px;
+}
+.about-me .info h2 {
+  padding: 10px 30px;
+  background-color: var(--main-color-1);
+  width: fit-content;
+  color: var(--main-color-4);
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 2px solid var(--main-color-3);
+  font-size: 28px;
+  font-weight: 500;
+}
+.about-me .info .box {
+  background-color: var(--main-color-1);
+  color: var(--main-color-5);
+  padding: 20px;
+  width: 90%;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.about-me .info .box span {
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--main-color-3);
+}
+.about-me .info .box p {
+  margin: 20px 0 0;
+  line-height: 1.5;
+  font-size: 18px;
+}
+/* End About Me */
 
 /* Start Animations */
 @keyframes control-width {
