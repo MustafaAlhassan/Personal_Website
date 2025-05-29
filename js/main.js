@@ -18,22 +18,20 @@ toggleClose.onclick = function (e) {
 
 // Change between dark and light modes
 function darkToLight() {
-  document.documentElement.style.setProperty("--main-color-1", "#fdfdfd");
-  document.documentElement.style.setProperty("--main-color-2", "#e9ecef");
+  document.documentElement.style.setProperty("--main-color-1", "#ffffff");
+  document.documentElement.style.setProperty("--main-color-2", "#f3f3f3");
   document.documentElement.style.setProperty("--main-color-3", "#0cb5a4");
   document.documentElement.style.setProperty("--main-color-4", "#58beaf");
   document.documentElement.style.setProperty("--main-color-5", "#000000");
-  document.documentElement.style.setProperty("--main-color-6", "#ffffff");
-  document.documentElement.style.setProperty("--main-color-7", "#c7c3c3");
+  document.documentElement.style.setProperty("--main-color-6", "#c7c3c3");
 }
 function lightToDark() {
   document.documentElement.style.setProperty("--main-color-1", "#1a1e23");
-  document.documentElement.style.setProperty("--main-color-2", "#5a616b");
+  document.documentElement.style.setProperty("--main-color-2", "#000000");
   document.documentElement.style.setProperty("--main-color-3", "#12f7d6");
   document.documentElement.style.setProperty("--main-color-4", "#b6fff4");
   document.documentElement.style.setProperty("--main-color-5", "#ffffff");
-  document.documentElement.style.setProperty("--main-color-6", "#000000");
-  document.documentElement.style.setProperty("--main-color-7", "#7d7a7a");
+  document.documentElement.style.setProperty("--main-color-6", "#7d7a7a");
 }
 let darkLightMode = document.querySelector(".dark-light-mode");
 let lightMode = document.querySelector(".dark-light-mode .light-mode");
