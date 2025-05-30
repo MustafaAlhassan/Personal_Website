@@ -1,6 +1,6 @@
 /* Start Base */
 :root {
-  --main-color-1: #1a1e23;
+  --main-color-1: #252a31;
   --main-color-2: #000000;
   --main-color-3: #12f7d6;
   --main-color-4: #b6fff4;
@@ -410,6 +410,11 @@ a {
   font-size: 28px;
   font-weight: 500;
 }
+@media (max-width: 575px) {
+  .about-me .info h2 {
+    margin: 0 auto 20px;
+  }
+}
 .about-me .info .box {
   background-color: var(--main-color-1);
   color: var(--main-color-5);
@@ -438,6 +443,72 @@ a {
   font-size: 18px;
 }
 /* End About Me */
+/* Start Skills */
+.skills {
+  padding: 60px 0;
+  background-color: var(--main-color-1);
+  text-align: center;
+}
+.skills h2 {
+  margin: 0 0 10px;
+  color: var(--main-color-3);
+  font-size: 48px;
+  letter-spacing: 1px;
+}
+.skills p {
+  margin: 0 0 30px;
+  color: var(--main-color-4);
+}
+.skills .boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+  gap: 20px;
+}
+@media (max-width: 575px) {
+  .skills .boxes {
+    gap: 10px;
+  }
+}
+.skills .skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color-2);
+  padding: 20px 30px;
+  width: 100%;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.skills .skill:hover {
+  transform: translateY(-8px);
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  -o-transform: translateY(-8px);
+}
+.skills .skill .image img {
+  width: 72px;
+}
+@media (max-width: 575px) {
+  .skills .skill .image img {
+    width: 60px;
+  }
+}
+.skills .skill span {
+  display: inline-block;
+  color: var(--main-color-5);
+  margin-top: 10px;
+}
+/* End Skills */
 
 /* Start Animations */
 @keyframes control-width {

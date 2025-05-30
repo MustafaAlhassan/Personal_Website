@@ -26,7 +26,7 @@ function darkToLight() {
   document.documentElement.style.setProperty("--main-color-6", "#c7c3c3");
 }
 function lightToDark() {
-  document.documentElement.style.setProperty("--main-color-1", "#1a1e23");
+  document.documentElement.style.setProperty("--main-color-1", "#252a31");
   document.documentElement.style.setProperty("--main-color-2", "#000000");
   document.documentElement.style.setProperty("--main-color-3", "#12f7d6");
   document.documentElement.style.setProperty("--main-color-4", "#b6fff4");
