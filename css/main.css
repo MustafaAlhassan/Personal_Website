@@ -428,11 +428,9 @@ a {
 }
 .about-me .info .box span {
   display: block;
-}
-.about-me .info .box span.hello {
-  font-weight: 400;
-  font-size: 24px;
   color: var(--main-color-3);
+  font-size: 28px;
+  font-weight: 400;
 }
 .about-me .info .box .text {
   margin: 100px 0;
