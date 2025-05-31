@@ -26,7 +26,7 @@ function darkToLight() {
   document.documentElement.style.setProperty("--main-color-6", "#c7c3c3");
 }
 function lightToDark() {
-  document.documentElement.style.setProperty("--main-color-1", "#252a31");
+  document.documentElement.style.setProperty("--main-color-1", "#1b1f24");
   document.documentElement.style.setProperty("--main-color-2", "#000000");
   document.documentElement.style.setProperty("--main-color-3", "#12f7d6");
   document.documentElement.style.setProperty("--main-color-4", "#b6fff4");
@@ -61,4 +61,58 @@ darkLightMode.onclick = function (e) {
     localStorage.setItem("light", "non-appear");
     lightToDark();
   }
+};
+
+let portfolioImage = document.querySelectorAll(
+  ".portfolio .projects .project .image"
+);
+let portfolioImageOverlay = document.querySelector(
+  ".portfolio .projects .back-overlay"
+);
+let portfolioCloseBtn = document.querySelector(
+  ".portfolio .projects .close-btn"
+);
+
+portfolioImage.forEach((image) => {
+  image.addEventListener("click", function () {
+    this.classList.add("open");
+    portfolioImageOverlay.classList.add("open");
+    portfolioCloseBtn.classList.add("open");
+  });
+});
+portfolioCloseBtn.onclick = function () {
+  portfolioImage.forEach((image) => {
+    image.classList.remove("open");
+  });
+  portfolioImageOverlay.classList.remove("open");
+  portfolioCloseBtn.classList.remove("open");
+};
+
+let viewMore = document.querySelector(".portfolio .view-more");
+let showLess = document.querySelector(".portfolio .show-less");
+let moreProjects = document.querySelector(".portfolio .more-projects");
+let projects = document.querySelectorAll(".projects .project");
+
+viewMore.onclick = function () {
+  projects.forEach((project) => {
+    if (project.classList.contains("non-appear")) {
+      project.classList.add("appear");
+    }
+    project.classList.remove("non-appear");
+  });
+  viewMore.classList.remove("show");
+  showLess.classList.add("show");
+  moreProjects.classList.add("show");
+};
+
+showLess.onclick = function () {
+  projects.forEach((project) => {
+    if (project.classList.contains("appear")) {
+      project.classList.add("non-appear");
+    }
+    project.classList.remove("appear");
+  });
+  showLess.classList.remove("show");
+  viewMore.classList.add("show");
+  moreProjects.classList.remove("show");
 };
