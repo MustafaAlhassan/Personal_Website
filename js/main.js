@@ -116,3 +116,18 @@ showLess.onclick = function () {
   viewMore.classList.add("show");
   moreProjects.classList.remove("show");
 };
+
+
+function scrollToSection(elements) {
+  elements.forEach((element) => {
+    element.addEventListener("click", (e) => {
+      e.preventDefault();
+      document.querySelector(e.target.dataset.section).scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+}
+
+let allLinks = document.querySelectorAll(".links a");
+scrollToSection(allLinks);

@@ -53,7 +53,7 @@ a {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(3px);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 800;
@@ -61,8 +61,8 @@ a {
 .dark-light-mode {
   color: white;
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 30px;
+  right: 30px;
   width: 50px;
   height: 50px;
   display: flex;
@@ -83,6 +83,12 @@ a {
   -ms-transition: var(--main-transition);
   -o-transition: var(--main-transition);
 }
+@media (max-width: 576px) {
+  .dark-light-mode {
+    right: 20px;
+    bottom: 20px;
+  }
+}
 .dark-light-mode:hover {
   color: var(--main-color-3);
 }
@@ -95,6 +101,11 @@ a {
   font-size: 48px;
   letter-spacing: 1px;
   width: fit-content;
+}
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 32px;
+  }
 }
 .section-para {
   margin: 0 auto 30px;
@@ -166,7 +177,9 @@ a {
     right: -200px;
     top: 0px;
     background-color: var(--main-color-3);
-    padding: 50px 0;
+    padding-left: 0;
+    padding-top: 70px;
+    padding-bottom: 50px;
     text-align: center;
     width: 200px;
     z-index: 1000;
@@ -202,8 +215,13 @@ a {
   color: var(--main-color-4);
 }
 @media (max-width: 991px) {
+  .landing-page header .links.open li {
+    border-bottom: 2px solid var(--main-color-1);
+    margin: 20px 20px 0;
+  }
   .landing-page header .links.open li a {
     color: var(--main-color-2);
+    font-size: 20px;
   }
   .landing-page header .links.open li:not(:last-of-type) {
     margin-bottom: 10px;
@@ -234,7 +252,7 @@ a {
 }
 @media (max-width: 991px) {
   .landing-page header .my-cv.open button {
-    position: absolute;
+    position: fixed;
     right: 25px;
     bottom: 30px;
     z-index: 1100;
@@ -653,6 +671,64 @@ a {
   -webkit-animation: down-up 1s linear infinite;
 }
 /* End Portfolio */
+/* Start Contact */
+.contact {
+  background-color: var(--main-color-1);
+  padding: 60px 0;
+  text-align: center;
+}
+.contact .email,
+.contact .phone-number {
+  display: block;
+  color: var(--main-color-5);
+  font-size: 24px;
+}
+@media (max-width: 576px) {
+  .contact .email,
+  .contact .phone-number {
+    font-size: 18px;
+  }
+}
+.contact .email i,
+.contact .phone-number i {
+  color: var(--main-color-3);
+}
+.contact .phone-number {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.contact .plat {
+  display: inline-block;
+  color: var(--main-color-4);
+  margin-bottom: 25px;
+}
+.contact .platforms a {
+  padding: 10px 15px;
+  background-color: var(--main-color-2);
+  color: var(--main-color-3);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.contact .platforms a:not(:last-of-type) {
+  margin-right: 10px;
+}
+/* End Contact */
+/* Start Footer */
+footer {
+  background-color: var(--main-color-2);
+  padding: 20px;
+  text-align: center;
+}
+footer div {
+  color: var(--main-color-5);
+}
+footer div span {
+  color: var(--main-color-3);
+}
+/* End Footer */
 
 /* Start Animations */
 @keyframes control-width {
